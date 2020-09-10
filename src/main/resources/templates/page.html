@@ -17,23 +17,41 @@
 
 <script>
     function myFunction(){
-        if(document.getElementById("inputField").value.length==0){
+
+        var x = 0;
+        x++
+
+        // denne kode snippet virker ikke. og jeg har svært ved at få en compare til at virke på
+        // når button.innerText == "Click me again!
+        // jeg er lidt usikker på hvordan jeg så skal få den til at gøre den sidste ting i opgaven
+        if(x==2){
+            document.getElementById("inputField").value ="Change me";
+            document.getElementById("Knap").innerText ="Change text above and click me again!";
+
+        }
+
+        else if(document.getElementById("inputField").value.length==0){
             document.getElementById("inputField").value ="Change me"
             document.getElementById("Knap").innerText ="Change text above and click me again!";
+
         }
 
         else if(document.getElementById("inputField").value.length>0){
-            document.getElementById("inputTekst").innerText="please work";
-            document.getElementById("knap").innerText ="Click me again!";
+            document.getElementById("inputTekst").innerText="Thank you for changing the input to:" +
+                document.getElementById("inputField").value;
+            document.getElementById("Knap").innerText ="Click me again!";
+
 
         }
-        /*
-        else if(document.getElementById("knap").innerText=="Change text above and click me again!"){
-            document.getElementById("inputField").value ="Change me23"
-            document.getElementById("inputTekst").innerText= "Thank you for changing the input to:" +
-            document.getElementById("inputField").value;
-        }
-        */
+
+
+            /*
+            else if(document.getElementById("knap").innerText=="Change text above and click me again!"){
+                document.getElementById("inputField").value ="Change me23"
+                document.getElementById("inputTekst").innerText= "Thank you for changing the input to:" +
+                document.getElementById("inputField").value;
+            }
+            */
     }
 
       /* <!-- var y= document.getElementById("KnapOgNap").innerText;
