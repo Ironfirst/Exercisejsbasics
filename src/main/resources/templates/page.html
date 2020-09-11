@@ -16,10 +16,14 @@
 
 
 <script>
+    var x = 0;
+
     function myFunction(){
 
-        var x = 0;
-        x++
+// hidden value til mid div
+// if innerHTML eller InnerText kan sammenligned med ===
+// kig lidt mere på det i weekenden.!
+// switch case kan også bruges ved at oprette var objects
 
         // denne kode snippet virker ikke. og jeg har svært ved at få en compare til at virke på
         // når button.innerText == "Click me again!
@@ -27,6 +31,8 @@
         if(x==2){
             document.getElementById("inputField").value ="Change me";
             document.getElementById("Knap").innerText ="Change text above and click me again!";
+            document.getElementById("inputTekst").hidden=true;
+            x=0;
 
         }
 
@@ -40,6 +46,8 @@
             document.getElementById("inputTekst").innerText="Thank you for changing the input to:" +
                 document.getElementById("inputField").value;
             document.getElementById("Knap").innerText ="Click me again!";
+            document.getElementById("inputTekst").hidden=false;
+            x=2;
 
 
         }
