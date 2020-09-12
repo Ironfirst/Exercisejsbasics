@@ -8,7 +8,13 @@ public class HomeController
 {
     @GetMapping("/")
         public String page(){
-            return "Page";
+            return "page";
+
+    }
+
+    @GetMapping("/")
+    public String page1(){
+        return "pageJQuery";
 
     }
 }
