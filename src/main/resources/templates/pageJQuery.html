@@ -29,30 +29,44 @@
 
     function myFunction(){
 
-            // $("#inputTekst").text("hello")
-            // $("input").val("Change")
-            // $("Knap").text("Change text above and click me again!");
+        if($("button").text()=="Click me again!"){
+            $("input").val("Change me");
+            $("button").text("Change text above and click me again!");
 
-
-        if(x==2){
-            document.getElementById("inputField").value ="Change me";
-            document.getElementById("Knap").innerText ="Change text above and click me again!";
+            // document.getElementById("inputField").value ="Change me";
+            // document.getElementById("Knap").innerText ="Change text above and click me again!";
             document.getElementById("inputTekst").hidden=true;
             x=0;
-        }
 
-        else if(document.getElementById("inputField").value.length==0){
-            document.getElementById("inputField").value ="Change me"
-            document.getElementById("Knap").innerText ="Change text above and click me again!";
         }
+        else if($("input").val()===""){
+            $("input").val("Change me")
+            $("button").text("Change text above and click me again!");
 
-        else if(document.getElementById("inputField").value.length>0){
-            document.getElementById("inputTekst").innerText="Thank you for changing the input to:" +
-                document.getElementById("inputField").value;
-            document.getElementById("Knap").innerText ="Click me again!";
+        }
+        else if($("button").text()=="Change text above and click me again!"){
+            $("div").text("Thank you for changing the input to:" + $("input").val());
+            $("input").text($(""));
+            $("button").text("Click me again!");
             document.getElementById("inputTekst").hidden=false;
             x=2;
+
         }
+// else if(document.getElementById("inputField").value.length>0){
+        //     document.getElementById("inputTekst").innerText="Thank you for changing the input to:" +
+        //         document.getElementById("inputField").value;
+        //     document.getElementById("Knap").innerText ="Click me again!";
+        //     document.getElementById("inputTekst").hidden=false;
+        //     x=2;
+        // }
+
+        // oprindelig javascript kode
+        // else if(document.getElementById("inputField").value.length==0){
+        //     document.getElementById("inputField").value ="Change me"
+        //     document.getElementById("Knap").innerText ="Change text above and click me again!";
+        // }
+
+
     }
 </script>
 
